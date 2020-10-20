@@ -12,7 +12,7 @@
 ```
 docker network create fastdfs-net
 docker run -dit --network=fastdfs-net --name tracker -p 8888:80 -p 22122:22122 -v /var/fdfs/tracker:/var/fdfs kolehank/fastdfs-nginx-docker:latest tracker
-docker run -dit --network=fastdfs-net --name storage -e TRACKER_SERVER=tracker:22122 -p 23000:23000 -v /var/fdfs/storage0:/var/fdfs kolehank/fastdfs-nginx-docker:latest storage
+docker run -dit --network=fastdfs-net --name storage -e TRACKER_SERVER=tracker:22122 -p 23000:23000 -v /var/fdfs/storage:/var/fdfs kolehank/fastdfs-nginx-docker:latest storage
 
 ```
 
