@@ -16,3 +16,15 @@ docker run -dit --network=fastdfs-net --name storage -e TRACKER_SERVER=tracker:2
 
 ```
 
+## Upload file example
+```
+docker exec -it tracker sh
+```
+copy 1.jpg to `/var/fdfs/tracker`
+
+```
+/usr/bin/fdfs_upload_file /etc/fdfs/client.conf /var/fdfs/1.jpg 
+```
+
+
+http://localhost:8888/
